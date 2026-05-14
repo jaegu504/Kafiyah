@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ota" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كافيه سؤاللرى | Kafiye Flashcards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button id="darkModeToggle" class="header-btn">مظلم وضع</button>
+        <div class="header-title-container">
+            <h1 id="mainTitle">كافيه سؤاللرى</h1>
+        </div>
+        <button id="hamburgerBtn" class="header-btn">☰</button>
+    </header>
+
+    <div class="container">
+        <aside id="sidebar">
+            <nav id="chapterMenu">
+                <button class="chapter-btn" data-chapter="كلمه، كلام و اعراب">كلمه، كلام و اعراب</button>
+                <button class="chapter-btn" data-chapter="غير منصرف">غير منصرف</button>
+                <button class="chapter-btn" data-chapter="مرفوعات">مرفوعات</button>
+                <button class="chapter-btn" data-chapter="منصوبات">منصوبات</button>
+                <button class="chapter-btn" data-chapter="مجرورات">مجرورات</button>
+                <button class="chapter-btn" data-chapter="توابع و مَبْنِيَّات">توابع و مَبْنِيَّات</button>
+                <button class="chapter-btn" data-chapter="فِعْل">فِعْل</button>
+                <button class="chapter-btn" data-chapter="حَرْفْلَر و خَاتِمَه">حَرْفْلَر و خَاتِمَه</button>
+                <button class="chapter-btn" data-chapter="all">بتون سؤاللردن</button>
+            </nav>
+        </aside>
+
+        <main id="mainContent">
+            <div id="questionContainer">
+                <p id="questionText">سوالی كورمك ايچون بر باب سچڭز</p>
+            </div>
+            <div id="answerContainer" style="display: none;">
+                <p id="answerText"></p>
+            </div>
+            <div class="controls">
+                <button id="showAnswerBtn" disabled>جوابی كور</button>
+                <button id="nextQuestionBtn" disabled>ايلرى</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
