@@ -172,7 +172,8 @@ button:disabled { opacity: 0.4; cursor: not-allowed; }
 @media (max-width: 768px) {
     aside#sidebar {
         position: fixed;
-        bottom: -100%;
+        top: auto; /* Reset nilai top dari desktop */
+        bottom: 0; /* Titik jangkar di bawah */
         left: 0;
         right: 0;
         width: 100%;
@@ -184,10 +185,13 @@ button:disabled { opacity: 0.4; cursor: not-allowed; }
         box-shadow: 0 -5px 25px rgba(0,0,0,0.15);
         border-radius: 25px 25px 0 0;
         padding: 25px;
-        transition: bottom 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+        transform: translateY(100%); /* Sembunyikan panel ke bawah layar */
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
     }
 
-    aside#sidebar.open { bottom: 0; }
+    aside#sidebar.open { 
+        transform: translateY(0); /* Munculkan panel ke posisi semula */
+    }
 
     aside#sidebar nav {
         display: grid;
